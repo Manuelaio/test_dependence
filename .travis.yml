@@ -1,4 +1,7 @@
 language: r
 
+r:
+  - 3.5.1
+
 install:
     - Rscript dependencies.R
