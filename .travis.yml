@@ -3,9 +3,5 @@ language: r
 r:
   - 3.5.1
 
-install:
-   -R -e "install.packages(c('shiny', 'shinydashboard'), repos='http://cran.rstudio.com/')"
-   -R -e "install.packages('BiocManager')"
-
 script:
     - Rscript dependencies.R
