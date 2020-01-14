@@ -6,7 +6,6 @@ r:
 install:
    -R -e "install.packages(c('shiny', 'shinydashboard'), repos='http://cran.rstudio.com/')"
    -R -e "install.packages('BiocManager')"
-   -R -e "BiocManager::install('BiocInstaller')"
 
 script:
     - Rscript dependencies.R
