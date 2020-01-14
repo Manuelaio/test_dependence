@@ -1,16 +1,4 @@
-dist: trusty
-
 language: r
 
-sudo: false
-
-r: 
-  - 3.5.1
- 
-cache:
-  # Main R library
-  packages: true
-  
-
-script:
-- R -f dependencies.R
+install:
+    - Rscript dependencies.R
