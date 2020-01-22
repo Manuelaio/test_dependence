@@ -30,5 +30,5 @@ if(length(not_installed_yet) == 0) {
   print("Good to go!")
 } else {
   print("You need to install these packages!")
-  not_installed
+  not_installed_yet
 }
