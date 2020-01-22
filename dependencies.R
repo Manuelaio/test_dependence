@@ -1,7 +1,7 @@
 setRepositories(ind = 1:5)
 install.packages(c('shiny', 'shinydashboard'), repos='http://cran.rstudio.com/')
 install.packages('BiocManager')
-BiocManager::install('BiocInstaller')
+#BiocManager::install('BiocInstaller')
 list_of_packages <- c("shinyWidgets", "BiocInstaller","shinyWidgets","shinyBS","markdown","DT", "data.table", "dplyr", "Gviz", "Homo.sapiens",
                       "OrganismDbi", "stringr", "shinyjs", "condformat","ggbio", "bedr", "org.Hs.eg.db", "rtracklayer","stats",
                       "Rsamtools", "TxDb.Hsapiens.UCSC.hg19.knownGene","TxDb.Hsapiens.UCSC.hg38.knownGene",
@@ -12,8 +12,9 @@ lst_to_install <- list_of_packages[!(list_of_packages %in% installed.packages()[
 
 n_cores <- parallel::detectCores()
 install.packages(lst_to_install, Ncpus = n_cores - 1, clean = TRUE)
-BiocInstaller::biocLite('Gviz')
-BiocInstaller::biocLite('ggbio')
+BiocManager::install("Gviz")
+BiocManager::install("ggbio")
+
 not_installed <- list_of_packages[!(list_of_packages %in% installed.packages()[, "Package"])]
 
 if(length(not_installed) == 0) {
