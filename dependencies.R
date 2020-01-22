@@ -6,10 +6,11 @@ list_of_packages <- c("shinyWidgets", "BiocInstaller","DT","shinyWidgets","shiny
                       "OrganismDbi", "stringr", "shinyjs", "condformat","ggbio", "bedr", "org.Hs.eg.db", "rtracklayer","stats",
                       "Rsamtools", "TxDb.Hsapiens.UCSC.hg19.knownGene","TxDb.Hsapiens.UCSC.hg38.knownGene",
                       "BSgenome.Hsapiens.UCSC.hg19", "BSgenome.Hsapiens.UCSC.hg38",
-                      "EnsDb.Hsapiens.v75","EnsDb.Hsapiens.v86", "ranger", "caret")
+                      "EnsDb.Hsapiens.v75","EnsDb.Hsapiens.v86")
 
 lst_to_install <- list_of_packages[!(list_of_packages %in% installed.packages()[, "Package"])]
-
+BiocInstaller::biocLite('Gviz')
+BiocInstaller::biocLite('ggbio')
 n_cores <- parallel::detectCores()
 install.packages(lst_to_install, Ncpus = n_cores - 1, clean = TRUE)
 
