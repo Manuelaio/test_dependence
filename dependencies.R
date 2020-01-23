@@ -23,3 +23,11 @@ if(length(not_installed) == 0) {
   print("You need to install these packages!")
   not_installed
 }
+
+my_packages= installed.packages()[,1]
+check_require <- function(package){
+   if(eval(parse(text=paste("require(",package,")")))) return(paste0(package, ' works in environment rstudio \n'))
+   else(return(paste0(package,' error! No package calls \n')))
+        suppressPackageStartupMessages(require(package))
+
+}
