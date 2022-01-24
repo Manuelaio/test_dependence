@@ -24,7 +24,7 @@ list_of_packages<- c('markdown', 'shiny', 'shinyjs', 'shinyBS', 'shinyWidgets', 
                      'openxlsx', 'condformat', 'stringr', 'bedr',  'rlist', 
                      'processx', 'dplyr', 'Gviz', 'Homo.sapiens','org.Hs.eg.db', 'TxDb.Hsapiens.UCSC.hg38.knownGene', 
                      'TxDb.Hsapiens.UCSC.hg19.knownGene','EnsDb.Hsapiens.v75', 'EnsDb.Hsapiens.v86', 'OrganismDbi',
-                     'BSgenome.Hsapiens.UCSC.hg19','BSgenome.Hsapiens.UCSC.hg38', 'Rsamtools', 'GenomicRanges')
+                     'BSgenome.Hsapiens.UCSC.hg19', 'Rsamtools', 'GenomicRanges')
 
 not_installed <- list_of_packages[!(list_of_packages %in% installed.packages()[, "Package"])]
 
