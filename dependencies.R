@@ -7,7 +7,7 @@ BiocManager::install('BiocInstaller')
 
 list_of_packages_bio <-c('Gviz', 'Homo.sapiens','org.Hs.eg.db', 'TxDb.Hsapiens.UCSC.hg38.knownGene', 
   'TxDb.Hsapiens.UCSC.hg19.knownGene','EnsDb.Hsapiens.v75', 'EnsDb.Hsapiens.v86', 'OrganismDbi',
-  'BSgenome.Hsapiens.UCSC.hg19', 'Rsamtools', 'GenomicRanges')
+  'BSgenome.Hsapiens.UCSC.hg19', 'BSgenome.Hsapiens.UCSC.hg38', 'Rsamtools', 'GenomicRanges')
 
 list_of_packages_cran <- c('markdown', 'shiny', 'shinyjs', 'shinyBS', 'shinyWidgets', 'shinycssloaders', 'DT', 
                       'openxlsx', 'condformat', 'stringr', 'bedr',  'rlist', 
